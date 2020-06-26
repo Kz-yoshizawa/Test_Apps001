@@ -1,2 +1,4 @@
 C:\01_Works\02_Dev\01_C_Lang\SourceCodes\ConsoleApps_001\Debug\FuncLib.pdb
 C:\01_Works\02_Dev\01_C_Lang\SourceCodes\ConsoleApps_001\FuncLib\Debug\FuncLib.pdb
+C:\01_Works\02_Dev\Github\Test_Apps001\Debug\FuncLib.pdb
+C:\01_Works\02_Dev\Github\Test_Apps001\FuncLib\Debug\FuncLib.pdb

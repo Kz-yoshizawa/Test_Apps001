@@ -8,7 +8,7 @@ int main()
 {
     printf("Hello World!\n");
 
-	p_func_type		p_func;
+	//p_func_type		p_func;
 	int8_t			rc;
 	int		arry = 0;
 	int		str = 0;

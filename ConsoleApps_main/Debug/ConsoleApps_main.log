@@ -1,3 +1,2 @@
 ﻿  ConsoleApps_main.cpp
-C:\01_Works\02_Dev\01_C_Lang\SourceCodes\ConsoleApps_001\ConsoleApps_main\ConsoleApps_main.cpp(11,15): warning C4101: 'p_func': ローカル変数は 1 度も使われていません。
-  ConsoleApps_main.vcxproj -> C:\01_Works\02_Dev\01_C_Lang\SourceCodes\ConsoleApps_001\Debug\ConsoleApps_main.exe
+  ConsoleApps_main.vcxproj -> C:\01_Works\02_Dev\Github\Test_Apps001\Debug\ConsoleApps_main.exe
