@@ -8,28 +8,35 @@
 #ifndef _HTTPD_H_
 #define _HTTPD_H_
 
-#define WIN32_LEAN_AND_MEAN   
-
+#include <stdio.h>
+#include <stdlib.h>
 // Winsock
 #include <winsock2.h>
 
-typedef struct t_http_client {
+typedef unsigned int SOCKETID;
 
-	SOCKET				sock;
-	struct sockaddr_in	client_addr;
-	int					len;
+typedef int(*p_httpd_func_type)(void);
 
-} T_HTTP_CLIENT;
+typedef struct t_http_socket {
 
-typedef struct t_http_server {
+	WSADATA					wsaData;
+	SOCKET					s_sock;
+	struct sockaddr_in		client_addr;
+	int						len;
+	SOCKET					c_sock;
+	struct sockaddr_in		server_addr;
+	SOCKETID				sid;
+	BOOL					yes;
+	struct t_http_socket*	p;
 
-	SOCKET				sock;
-	struct sockaddr_in	server_addr;
+} T_HTTP_SOCKET;
 
-} T_HTTP_SERVER;
-
-
-void init_winsock();
+int		en_queue(int);
+int		de_queue();
+T_HTTP_SOCKET*	take_queue(SOCKETID);
+int		init_httpd(int);
+int		close_httpd(int);
+int		httpd_main(void);
 
 
 #endif //_HTTPD_H_

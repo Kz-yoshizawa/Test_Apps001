@@ -23,10 +23,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FuncLib.cpp">
+    <ClCompile Include="FuncLib.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
+    <ClCompile Include="pch.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

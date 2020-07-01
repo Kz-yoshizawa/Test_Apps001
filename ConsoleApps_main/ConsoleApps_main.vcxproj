@@ -88,12 +88,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)FuncLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)FuncLib;$(SolutionDir)httpd_lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>FuncLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>httpd_lib.lib;FuncLib.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -145,11 +146,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ConsoleApps_main.cpp" />
+    <ClCompile Include="ConsoleApps_main.c" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FuncLib\FuncLib.vcxproj">
       <Project>{84cb18d0-f36e-4fc0-ab52-e7a984238d44}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\httpd_lib\httpd_lib.vcxproj">
+      <Project>{18882e2e-3c62-448b-9719-09330ae8a174}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
