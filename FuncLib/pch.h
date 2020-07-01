@@ -10,8 +10,9 @@
 // プリコンパイルするヘッダーをここに追加します
 #include "framework.h"
 #include <stdio.h>
-#include <cstdint>
 
+typedef int int32_t;
+typedef char int8_t;
 
 /* わかりやすいようにtypedefして使う */
 typedef int8_t(*p_func_type)(int32_t);
